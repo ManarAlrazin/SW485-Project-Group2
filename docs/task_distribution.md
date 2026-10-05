@@ -12,8 +12,6 @@
 | Ghala Alsanee | Model 2: rationale, training, tuning, error analysis | Phase1_Supervised_Learning.ipynb (Model 2 sections) | Oct 15 |
 | Fatimah Omran | Evaluation, comparison, conclusion, next steps for Phase 2 | Metrics, ROC curves, confusion matrices, comparison & conclusion | Oct 18 |
 
-## Order of work
-Noura (missing values) -> Tojan (preprocessing) -> Munira and Ghala (models) -> Fatimah (comparison).
 
 ## Shared rules
 - Same train/test split, `random_state=42`, and stratified 5-fold CV for both models.
