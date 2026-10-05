@@ -7,12 +7,13 @@
 
 | # | Name | Student ID | Phase 1 Role |
 |---|------|-----------|--------------|
-| 1 | Manar alrazin | 444200065 | Problem statement, README, repo setup & final review |
-| 2 | _<name>_ | _<ID>_ | _<e.g., Dataset selection & EDA>_ |
-| 3 | _<name>_ | _<ID>_ | _<e.g., Preprocessing & feature engineering>_ |
-| 4 | _<name>_ | _<ID>_ | _<e.g., Supervised model 1>_ |
-| 5 | _<name>_ | _<ID>_ | _<e.g., Supervised model 2>_ |
-| 6 | _<name>_ | _<ID>_ | _<e.g., Evaluation & comparison>_ |
+| 1 | Manar Alrazin | 44420065 | Problem statement, README, repo setup, dataset justification & final review |
+| 2 | Noura Alaqeel | _<ID>_ | Data inspection, statistics, missing values handling & key insights |
+| 3 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
+| 4 | Tojan Alnajjar | _<ID>_ | Encoding, scaling, outliers & feature engineering |
+| 5 | Munira Algaith | _<ID>_ | Model 1: training, tuning, feature importance & error analysis |
+| 6 | Ghala Alsanee | _<ID>_ | Model 2: training, tuning & error analysis |
+| 7 | Fatimah Omran | _<ID>_ | Model evaluation, comparison & conclusion |
 
 Detailed task distribution: [`docs/task_distribution.md`](docs/task_distribution.md)
 
@@ -48,7 +49,7 @@ HR leaders in organizations that train data scientists lack an early, data-drive
 ## 5. Repository Structure (After Phase 1)
 
 ```
-SW485-Project-Group#/
+SW485-Project-Group2/
 ├── README.md
 ├── Phase1_Data_Exploration.ipynb
 ├── Phase1_Supervised_Learning.ipynb
@@ -75,8 +76,8 @@ Phase 2 will add `Unsupervised_Learning/`, `Generative_AI/`, `Dataset/clustered_
 ## 7. How to Run
 
 ```bash
-git clone https://github.com/<org>/SW485-Project-Group#.git
-cd SW485-Project-Group#
+git clone https://github.com/ManarAlrazin/SW485-Project-Group2.git
+cd SW485-Project-Group2
 pip install -r requirements.txt
 jupyter notebook
 ```
