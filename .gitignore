@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Secrets (GenAI API keys in Phase 2)
+.env
+*.env
+api_config.py
+secrets.*
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
