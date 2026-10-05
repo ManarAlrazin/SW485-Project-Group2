@@ -1,0 +1,47 @@
+DATASET INFORMATION
+===================
+
+Name:
+  HR Analytics: Job Change of Data Scientists
+
+Kaggle URL:
+  https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists
+
+License:
+  CC0: Public Domain
+  (Verify on the Kaggle dataset page before submission.)
+
+File used:
+  aug_train.csv  (saved in this repo as raw_kaggle_data.csv)
+  19,158 records, 14 columns
+
+Original purpose:
+  Designed to understand the factors that lead a person to leave their current
+  job, for HR research. A company that trains data scientists wants to know
+  which enrollees will stay and which will look for a new job, so it can
+  reduce hiring/training costs and plan its workforce and courses.
+
+Target variable:
+  target  ->  0 = Not looking for a job change
+              1 = Looking for a job change
+
+Columns:
+  enrollee_id            Unique candidate ID (identifier, not a predictor)
+  city                   City code
+  city_development_index Development index of the city (scaled)
+  gender                 Gender of candidate
+  relevent_experience    Relevant experience (yes/no)
+  enrolled_university    University course enrollment type, if any
+  education_level        Education level
+  major_discipline       Education major discipline
+  experience             Total experience in years
+  company_size           Number of employees in current employer
+  company_type           Type of current employer
+  last_new_job           Years between previous job and current job
+  training_hours         Training hours completed
+  target                 Job-change label (see above)
+
+Known data characteristics:
+  - Missing values in several categorical columns
+  - Imbalanced class distribution (class 1 is the minority)
+  - Mixed categorical and numeric features
