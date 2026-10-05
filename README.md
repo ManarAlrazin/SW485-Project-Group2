@@ -8,7 +8,7 @@
 | # | Name | Student ID | Phase 1 Role |
 |---|------|-----------|--------------|
 | 1 | Manar Alrazin | 44420065 | Problem statement, README, repo setup, dataset justification & final review |
-| 2 | Noura Alaqeel | _<ID>_ | Data inspection, statistics, missing values handling & key insights |
+| 2 | Noura Alaqeel | 444200615 | Data inspection, statistics, missing values handling & key insights |
 | 3 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
 | 4 | Tojan Alnajjar | _<ID>_ | Encoding, scaling, outliers & feature engineering |
 | 5 | Munira Algaith | _<ID>_ | Model 1: training, tuning, feature importance & error analysis |
