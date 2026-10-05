@@ -7,7 +7,7 @@
 
 | # | Name | Student ID | Phase 1 Role |
 |---|------|-----------|--------------|
-| 1 | Manar alrazin | 444200065 | Problem statement, README, repo setup & final review |
+| 1 | Manar alrazin| 444200065 | Problem statement, README, repo setup & final review |
 | 2 | _<name>_ | _<ID>_ | _<e.g., Dataset selection & EDA>_ |
 | 3 | _<name>_ | _<ID>_ | _<e.g., Preprocessing & feature engineering>_ |
 | 4 | _<name>_ | _<ID>_ | _<e.g., Supervised model 1>_ |
