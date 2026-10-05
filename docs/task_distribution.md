@@ -4,7 +4,7 @@
 
 | Member | Role / Responsibility | Deliverable | Deadline |
 |--------|-----------------------|-------------|----------|
-| _<Manar alrazin>_ | Problem statement, README, repo setup, final review | README.md, repo structure, dataset_info.txt, final QA | _<date>_ |
+| _Manar alrazin_ | Problem statement, README, repo setup, final review | README.md, repo structure, dataset_info.txt, final QA | _<date>_ |
 | _<name>_ | Dataset selection & justification, EDA | Phase1_Data_Exploration.ipynb (sections 2–4) | _<date>_ |
 | _<name>_ | Preprocessing & feature engineering | preprocessed_data.csv, notebook sections 5–6 | _<date>_ |
 | _<name>_ | Supervised model 1 + tuning | Phase1_Supervised_Learning.ipynb | _<date>_ |
