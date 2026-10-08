@@ -33,6 +33,11 @@ _Each member adds a short reflection on what they learned and the challenges fac
 
 ### Manar Alrazin
 ### Noura Alaqeel
+My part was data inspection, statistics, missing values handling and key insights.
+The most important thing I learned is that missing values are not always just "empty" data. In our dataset, candidates who did not report their company were about twice as likely to look for a new job (38.8% vs 18.4%), so instead of deleting these rows or filling them with the most common value, I kept them as an "Unknown" category.
+I also learned what data leakage means and why we should not use mean or mode imputation before the train/test split.
+It was also my first time working with notebooks in VS Code, so setting up the environment took me some time.
+The hardest part for me was deciding how to handle each column with missing values: when to fill it with "Unknown", when to use "No Major" and when to drop the rows.
 ### Rana Albarrak
 ### Tojan Alnajjar
 ### Munira Algaith
