@@ -10,7 +10,7 @@
 | 1 | Manar Alrazin | 44420065 | Problem statement, README, repo setup, dataset justification & final review |
 | 2 | Noura Alaqeel | 444200615 | Data inspection, statistics, missing values handling & key insights |
 | 3 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
-| 4 | Tojan Alnajjar | _<ID>_ | Encoding, scaling, outliers & feature engineering |
+| 4 | Tojan Alnajjar | 444200074 | Encoding, scaling, outliers & feature engineering |
 | 5 | Munira Algaith | _<ID>_ | Model 1: training, tuning, feature importance & error analysis |
 | 6 | Ghala Alsanee | _<ID>_ | Model 2: training, tuning & error analysis |
 | 7 | Fatimah Omran | _<ID>_ | Model evaluation, comparison & conclusion |
