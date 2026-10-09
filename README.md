@@ -12,7 +12,7 @@
 | 3 | Tojan Alnajjar | 444200074 | Encoding, scaling, outliers & feature engineering |
 | 4 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
 | 5 | Munira Algaith | _<ID>_ | Model 1: training, tuning, feature importance & error analysis |
-| 6 | Ghala Alsanee | _<ID>_ | Model 2: training, tuning & error analysis |
+| 6 | Ghala Alsanee | 443200871 | Model 2: training, tuning & error analysis |
 | 7 | Fatimah Omran | _<ID>_ | Model evaluation, comparison & conclusion |
 
 Detailed task distribution: [`docs/task_distribution.md`](docs/task_distribution.md)
