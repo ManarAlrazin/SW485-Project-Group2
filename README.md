@@ -13,7 +13,7 @@
 | 4 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
 | 5 | Munirah Alghayth | 444202467 | Model 1: training, tuning, feature importance & error analysis |
 | 6 | Ghala Alsanie | 443200871 | Model 2: training, tuning & error analysis |
-| 7 | Fatimah Omran | _<ID>_ | Model evaluation, comparison & conclusion |
+| 7 | Fatimah Omran | 444200085 | Model evaluation, comparison & conclusion |
 
 Detailed task distribution: [`docs/task_distribution.md`](docs/task_distribution.md)
 
