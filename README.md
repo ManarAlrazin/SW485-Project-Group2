@@ -11,7 +11,7 @@
 | 2 | Noura Alaqeel | 444200615 | Data inspection, statistics, missing values handling & key insights |
 | 3 | Tojan Alnajjar | 444200074 | Encoding, scaling, outliers & feature engineering |
 | 4 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
-| 5 | Munira Algaith | 444202467 | Model 1: training, tuning, feature importance & error analysis |
+| 5 | Munirah Alghayth | 444202467 | Model 1: training, tuning, feature importance & error analysis |
 | 6 | Ghala Alsanie | 443200871 | Model 2: training, tuning & error analysis |
 | 7 | Fatimah Omran | _<ID>_ | Model evaluation, comparison & conclusion |
 
