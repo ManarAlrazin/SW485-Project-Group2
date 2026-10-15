@@ -85,7 +85,7 @@ Run in order: `Phase1_Data_Exploration.ipynb` → `Phase1_Supervised_Learning.ip
 
 ## 8. Use of Assistive Tools
 
-_<Per the handbook, state clearly how any AI tools were used, e.g., "used to improve the wording of the README; all analysis and code are our own.">_
+We used AI assistants (such as Claude) as support tools during this project, mainly to improve our writing and to help with structure, code and debugging. We did not use them to create the work from scratch. All analysis decisions, results and interpretations were reviewed, edited and understood by the team members who submitted them.
 
 ## 9. Dashboard (Phase 2)
 
