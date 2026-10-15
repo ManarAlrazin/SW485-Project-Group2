@@ -9,7 +9,6 @@ Kaggle URL:
 
 License:
   CC0: Public Domain
-  (Verify on the Kaggle dataset page before submission.)
 
 File used:
   aug_train.csv  (saved in this repo as raw_kaggle_data.csv)
