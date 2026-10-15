@@ -32,6 +32,11 @@ _To be assigned after Phase 1 submission. Roles will rotate._
 _Each member adds a short reflection on what they learned and the challenges faced._
 
 ### Manar Alrazin
+My part was the problem statement, the README, the repository setup, the dataset justification, and the final review.
+The most important thing I learned is to read the project description carefully and write only what it asks for. My first draft of the introduction had extra sections (users, objectives, scope) that the description does not require, so I shortened it to a clear introduction and a concise problem statement.
+I also learned why the team rules matter: dropping the ID column and splitting the data before scaling or encoding prevents data leakage, so I made sure every member knew them before starting.
+Working with Git as a team was new to me: uploading folders through the website did not keep them, so I had to fix the structure by hand. Later I had to merge the notebooks from different members into the two required ones, and clean the commit history after everyone finished.
+The hardest part was coordinating the order of work. Preprocessing depends on the cleaning, and the models depend on the preprocessing, so one late part delays the others.
 ### Noura Alaqeel
 My part was data inspection, statistics, missing values handling and key insights.
 The most important thing I learned is that missing values are not always just "empty" data. In our dataset, candidates who did not report their company were about twice as likely to look for a new job (38.8% vs 18.4%), so instead of deleting these rows or filling them with the most common value, I kept them as an "Unknown" category.
