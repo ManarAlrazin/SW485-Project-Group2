@@ -70,7 +70,7 @@ Phase 2 will add `Unsupervised_Learning/`, `Generative_AI/`, `Dataset/clustered_
 
 | Phase | Deadline | Components | Status |
 |-------|----------|-----------|--------|
-| 1 | Oct 22, 2026 | Problem understanding & data exploration; supervised learning | In progress |
+| 1 | Oct 22, 2026 | Problem understanding & data exploration; supervised learning | Done |
 | 2 | Dec 3, 2026 | Unsupervised learning; structured prompt engineering & GenAI; interactive executive dashboard | Not started |
 
 ## 7. How to Run
