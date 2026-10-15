@@ -1,7 +1,7 @@
 # SW485-Project-Group2 — Executive Decision-Support System for Data Scientist Job-Change Prediction
 
 **Course:** SWE485 – Selected Topics in Software Engineering, King Saud University (1st semester 1448)
-**Instructor:** _<instructor name>_
+**Instructor:** Hailah Almazrua
 
 ## 1. Team Members
 
@@ -10,7 +10,7 @@
 | 1 | Manar Alrazin | 444200065 | Problem statement, README, repo setup, dataset justification & final review |
 | 2 | Noura Alaqeel | 444200615 | Data inspection, statistics, missing values handling & key insights |
 | 3 | Tojan Alnajjar | 444200074 | Encoding, scaling, outliers & feature engineering |
-| 4 | Rana Albarrak | _<ID>_ | EDA visualizations + interpretation |
+| 4 | Rana Albarrak | 444200623 | EDA visualizations + interpretation |
 | 5 | Munirah Alghayth | 444202467 | Model 1: training, tuning, feature importance & error analysis |
 | 6 | Ghala Alsanie | 443200871 | Model 2: training, tuning & error analysis |
 | 7 | Fatimah Omran | 444200085 | Model evaluation, comparison & conclusion |
