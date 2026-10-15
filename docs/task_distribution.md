@@ -9,7 +9,7 @@
 | Rana Albarrak | EDA visualizations + interpretation | Notebook: Exploratory Data Analysis | Oct 12 |
 | Tojan Alnajjar | Encoding, scaling, outliers, feature engineering, train/test split, imbalance handling | Notebook: Preprocessing Pipeline, preprocessed_data.csv | Oct 12 |
 | Munirah Alghayth | Model 1: rationale, training, tuning, feature importance, error analysis | Phase1_Supervised_Learning.ipynb (Model 1 sections) | Oct 15 |
-| Ghala Alsanee | Model 2: rationale, training, tuning, error analysis | Phase1_Supervised_Learning.ipynb (Model 2 sections) | Oct 15 |
+| Ghala Alsanie | Model 2: rationale, training, tuning, error analysis | Phase1_Supervised_Learning.ipynb (Model 2 sections) | Oct 15 |
 | Fatimah Omran | Evaluation, comparison, conclusion, next steps for Phase 2 | Metrics, ROC curves, confusion matrices, comparison & conclusion | Oct 18 |
 
 
@@ -44,7 +44,8 @@ I also learned what data leakage means and why we should not use mean or mode im
 It was also my first time working with notebooks in VS Code, so setting up the environment took me some time.
 The hardest part for me was deciding how to handle each column with missing values: when to fill it with "Unknown", when to use "No Major" and when to drop the rows.
 ### Rana Albarrak
+Working on the EDA helped me understand the data better and see how each plot can give useful information for the model. One interesting finding was that missing values can actually be useful. For example, candidates with missing company information had a higher job-change rate. The main challenge was working in a shared notebook. I had to make sure I did not repeat Noura’s plots or change my teammates’ work. I used an AI assistant to help with the plotting code. Then I reviewed the results and wrote the interpretations based on my understanding.
 ### Tojan Alnajjar
-### Munira Algaith
-### Ghala Alsanee
+### Munira Algayth
+### Ghala Alsanie
 ### Fatimah Omran
