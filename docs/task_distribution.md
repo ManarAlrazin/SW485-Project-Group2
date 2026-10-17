@@ -46,9 +46,19 @@ The hardest part for me was deciding how to handle each column with missing valu
 ### Rana Albarrak
 Working on the EDA helped me understand the data better and see how each plot can give useful information for the model. One interesting finding was that missing values can actually be useful. For example, candidates with missing company information had a higher job-change rate. The main challenge was working in a shared notebook. I had to make sure I did not repeat Noura’s plots or change my teammates’ work. I used an AI assistant to help with the plotting code. Then I reviewed the results and wrote the interpretations based on my understanding.
 ### Tojan Alnajjar
+My part was preprocessing: encoding, scaling, outliers, feature engineering, the train/test split, and the class-imbalance decision.
+
+The most important thing I learned is that the order of the steps matters. I split the data first and fitted the imputer, encoder and scaler on the training set only, so no information from the test set leaked into the models. I also learned that a missing value can carry information: candidates with no company information looked for a new job about 42% of the time versus 18% for the others, so I turned this into a feature (company_info_missing) instead of just filling it.
+
+Another thing I learned is why SMOTE should not be applied to the saved training file: synthetic rows would end up inside the cross-validation folds and inflate the scores. So I left the files without resampling and recommended class weights instead.
+
+The hardest part was handling “Unknown” in the ordinal columns (company_size and education_level), because Unknown has no place on an ordered scale. I solved it with a median fill from the training set plus separate flag columns. I also had to coordinate with my teammates so Munira, Ghala and Fatimah could use the same train and test files.
+
+I used an AI assistant to help write and explain the preprocessing code. I then ran it, checked the outputs, and wrote this reflection based on my own understanding of the steps.
 ### Munira Algayth
 I built the Logistic Regression model, covering its rationale, tuning, evaluation, feature importance, and error analysis. My main takeaway was learning to handle class imbalance properly — using balanced class weights and judging the model on precision, recall, F1, and ROC-AUC instead of misleading accuracy. I also learned to interpret the model by turning coefficients into odds ratios to explain what actually drives job change. A useful challenge was understanding why tuning barely changed my linear model while it improved XGBoost, which taught me that simple, well-conditioned models have little to gain from tuning — and to present that result honestly rather than overstate it.
 ### Ghala Alsanie
+I built and tuned the XGBoost Classifier, handling its setup, hyperparameter optimization, evaluation, and visualizations. My main takeaway was seeing how tree-based ensemble models strongly benefit from hyperparameter tuning using GridSearchCV to tune depth and learning rate directly boosted our ROC-AUC to 0.82 and increased Recall to 56.80%. I also learned how to extract and interpret feature importance from gradient boosting to identify the key factors driving employee attrition. Overcoming setup warnings and fine-tuning parameters taught me how non-linear models capture complex relationships that simpler models miss, providing actionable insights for HR retention strategies.
 ### Fatimah Omran
 My part was model evaluation, comparison, conclusion and next steps for Phase 2.
 The most important thing I learned is that accuracy is not enough when the data is imbalanced. XGBoost had higher accuracy, but it missed many of the people who were actually looking for a new job, so recall, F1 and ROC-AUC were more useful for comparing the models.
