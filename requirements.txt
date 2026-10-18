@@ -6,6 +6,3 @@ joblib
 matplotlib
 seaborn
 jupyter
-imbalanced-learn
-missingno
-scipy
