@@ -20,13 +20,16 @@
 - Model owners save predictions or fitted models for the comparison.
 
 ## Phase 2 (Deadline: Dec 3, 2026)
-_To be assigned after Phase 1 submission. Roles will rotate._
 
 | Member | Responsibility | Deliverable | Internal Deadline |
 |--------|----------------|-------------|-------------------|
-| | Unsupervised learning (clustering) | Phase2_Unsupervised_Learning.ipynb | |
-| | Generative AI & prompt templates | Phase2_Generative_AI.ipynb, prompt_design_rationale.md | |
-| | Executive dashboard | Dashboard link in README | |
+| Tojan Alnajjar | Dashboard lead (Part C), README update with the UI link, Phase 2 repo setup, Integration Strategy section, final review | Dashboard app, README.md, Unsupervised notebook Section 6 | Nov 26 (dashboard), Dec 1 (review) |
+| Manar Alrazin | Data preparation (target removal, scaling), K-Means, optimal number of clusters | Phase2_Unsupervised_Learning.ipynb (Sections 1.1, 2, 3.1), Dataset/clustered_data.csv | Nov 10 |
+| Munirah Alghayth | Second clustering algorithm, justification, evaluation metrics, comparison | Phase2_Unsupervised_Learning.ipynb (Sections 1.2, 3.2, 4) | Nov 14 |
+| Noura Alaqeel | Cluster visualizations, cluster profiles, Challenges & Limitations, dashboard cluster charts | Phase2_Unsupervised_Learning.ipynb (Sections 4, 5, 7), cluster_profiles.txt | Nov 19 (charts: Nov 26) |
+| Fatimah Omran | GenAI model selection and setup, API integration with safe key handling, implementation code, testing framework | Phase2_Generative_AI.ipynb (Sections 1, 3, 4), api_config_template.py | Nov 10 |
+| Rana Albarrak | Design and documentation of the two prompt templates | Phase2_Generative_AI.ipynb (Section 2), prompts/, prompt_design_rationale.md, markdown file in Generative_AI/docs/ | Nov 14 |
+| Ghala Alsanie | Testing, qualitative and quantitative analysis, best template selection, integration plan, ethics, dashboard GenAI panel. Also saves the final XGBoost model (threshold 0.32) in Supervised_Learning/models/ | Phase2_Generative_AI.ipynb (Sections 5-8), example_outputs/, XGBoost model file | Model: Nov 8, Analysis: Nov 19 (panel: Nov 26) |
 
 ## Individual Reflections
 _Each member adds a short reflection on what they learned and the challenges faced._
@@ -37,6 +40,13 @@ The most important thing I learned is to read the project description carefully 
 I also learned why the team rules matter: dropping the ID column and splitting the data before scaling or encoding prevents data leakage, so I made sure every member knew them before starting.
 Working with Git as a team was new to me: uploading folders through the website did not keep them, so I had to fix the structure by hand. Later I had to merge the notebooks from different members into the two required ones, and clean the commit history after everyone finished.
 The hardest part was coordinating the order of work. Preprocessing depends on the cleaning, and the models depend on the preprocessing, so one late part delays the others.
+
+**Phase 2**
+My part was data preparation and the first clustering algorithm (K-Means), including the choice of the number of clusters.
+The most important thing I learned is to remove the target before clustering, and to check the scale of the features, because K-Means uses distances. Our numeric columns were already standardized, so I did not scale the 0/1 columns again. If I did, the rare categories would get a very large weight.
+I also learned that the metrics do not always give a clear answer. The Silhouette score was low for every k (about 0.14) and there was no sharp elbow. So I also checked the stability with different random seeds and the Davies-Bouldin index, and I chose k = 5. I wrote the low Silhouette in the notebook instead of hiding it.
+The hardest part was choosing k when the metrics did not agree. My part also came first, so my teammates needed the cluster labels before they could start.
+
 ### Noura Alaqeel
 My part was data inspection, statistics, missing values handling and key insights.
 The most important thing I learned is that missing values are not always just "empty" data. In our dataset, candidates who did not report their company were about twice as likely to look for a new job (38.8% vs 18.4%), so instead of deleting these rows or filling them with the most common value, I kept them as an "Unknown" category.
