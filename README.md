@@ -71,7 +71,7 @@ Phase 2 will add `Unsupervised_Learning/`, `Generative_AI/`, `Dataset/clustered_
 | Phase | Deadline | Components | Status |
 |-------|----------|-----------|--------|
 | 1 | Oct 22, 2026 | Problem understanding & data exploration; supervised learning | Done |
-| 2 | Dec 3, 2026 | Unsupervised learning; structured prompt engineering & GenAI; interactive executive dashboard | Not started |
+| 2 | Dec 3, 2026 | Unsupervised learning; structured prompt engineering & GenAI; interactive executive dashboard | In progress |
 
 ## 7. How to Run
 
@@ -89,4 +89,22 @@ We used AI assistants (such as Claude) as support tools during this project, mai
 
 ## 9. Dashboard (Phase 2)
 
-_Link to the executive interface will be added here in Phase 2._
+**Live link:** _to be added after deployment_
+
+An executive dashboard (Streamlit) that shows, for a candidate profile chosen by the user:
+
+- **Prediction and confidence:** probability of looking for a job change, risk level, a decision threshold slider, and how reliable similar scores were on the test set.
+- **Key drivers:** which features raise or lower the score for that candidate.
+- **Segments:** the K-Means candidate segments (PCA view, size, job-change rate) and where the candidate falls.
+- **Scenario analysis:** sliders to see how the risk changes when training hours, experience, city development index or time since the last job change change.
+- **Executive KPIs:** observed job-change rate, highest-risk segment, ROC-AUC, recall and precision at the chosen threshold.
+- **AI briefing:** a Generative AI explanation panel (`Dashboard/genai_panel.py` is the connection point to the Generative AI module).
+
+Run it locally from the repository root:
+
+```bash
+pip install -r requirements.txt
+streamlit run Dashboard/app.py
+```
+
+The dashboard uses the Phase 1 preprocessor and models in `Supervised_Learning/models/`. When a file with `xgboost` in its name is present there, it appears in the model selector with the team's 0.32 decision threshold.
