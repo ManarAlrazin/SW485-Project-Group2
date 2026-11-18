@@ -1,0 +1,24 @@
+template,case_id,input_summary,response,response_words,fk_grade,keyword_alignment,response_time_s,call_ok
+draft_template,high_row651,"p=0.635, High, Segment 4 (50%), top drivers: City development index: 0.62 (below average, average 0.83), Company information: missing","**Assessment:** The candidate has a 63.5% predicted chance of looking for a job change, placing them in the High risk level (Segment 4, where 50% of candidates looked for a change).  
+
+**Main reasons:** City development index 0.62 (below the average 0.83) adds +0.91 risk; missing company information adds +0.32; less than one year of experience adds +0.23; unknown company size adds +0.11; the only mitigating factor is never having changed jobs (-0.13).  
+
+**Suggested HR action:** Initiate a proactive engagement conversation to understand the candidate’s career goals and address any concerns about location or company fit.",95,8.112894736842104,0.3333333333333333,1.06,True
+draft_template,elevated_row242,"p=0.553, Elevated, Segment 3 (14%), top drivers: Company information: missing, Company size: unknown","**Assessment:** The candidate has an elevated risk (55.3%) of looking for a job change.  
+
+**Main reasons:** missing company information (+1.05), unknown company size (+0.18), graduate education level (+0.16), high city development index (+0.12), partially offset by 15 years of experience (-0.15).  
+
+**Suggested HR action:** Initiate a targeted engagement conversation to clarify current employment details and explore retention incentives.",58,11.040948275862071,0.3333333333333333,1.68,True
+draft_template,low_row1668,"p=0.093, Low, Segment 3 (14%), top drivers: City development index: 0.88 (above average, average 0.83), Company information: provided","**Assessment:** The candidate has a low risk (9.3%) of looking for a job change, well below the 32% decision threshold.  
+
+**Main reasons:** City development index 0.88 (-0.58), company information provided (-0.33), 16 years of experience (-0.10), company size 100-500 employees (-0.09), and relevant experience confirmed (-0.09) all contribute to lowering the risk.  
+
+**Suggested HR action:** Maintain regular engagement and monitor for any changes in the listed drivers, but no immediate retention intervention is required.",74,9.462612612612613,0.3333333333333333,2.82,True
+draft_template,borderline_row817,"p=0.319, Low, Segment 1 (30%), top drivers: Company information: missing, City development index: 0.80 (below average, average 0.83)","**Assessment:** The candidate has a low risk (31.9%) of looking for a job change, just below the 32% decision threshold.  
+
+**Main reasons:**  
+- Missing company information (+0.72) and unknown company size (+0.18) increase risk.  
+- City development index of 0.80 (below the 0.83 average) reduces risk (-0.67).  
+- Relevant experience (-0.21) and graduate education (+0.16) have modest opposite effects.  
+
+**Suggested HR action:** Monitor the missing company data and consider a brief outreach to confirm current employment details, while noting the overall low turnover risk.",84,8.457314814814819,0.0,1.64,True
