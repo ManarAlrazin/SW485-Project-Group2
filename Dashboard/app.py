@@ -51,6 +51,19 @@ def pretty(feature: str) -> str:
     return feature
 
 
+def driver_label(feature: str, c: dict) -> str:
+    """Driver text that includes the candidate's real value (the AI briefing needs it)."""
+    shown = {"city_development_index": f"{c['city_development_index']:.2f}",
+             "experience": "more than 20" if c["experience"] >= 21 else ("less than 1" if c["experience"] == 0 else str(c["experience"])),
+             "last_new_job": {0: "never", 5: "more than 4"}.get(c["last_new_job"], str(c["last_new_job"])),
+             "training_hours_log": str(c["training_hours"]),
+             "company_size": c["company_size"], "education_level": c["education_level"],
+             "relevent_experience": "yes" if c["relevent_experience"] else "no"}
+    if feature in shown:
+        return f"{pretty(feature).replace('Has relevant experience', 'Relevant experience')} = {shown[feature]}"
+    return pretty(feature)
+
+
 # ---------------------------------------------------------------- sidebar: candidate + model
 with st.sidebar:
     st.header("Candidate profile")
@@ -222,11 +235,25 @@ with tab_scn:
 with tab_ai:
     ctx = {"probability": prob, "threshold": threshold, "risk": risk, "cluster": cluster_name(cluster_id),
            "cluster_rate": cluster_rate, "model": model_name,
-           "drivers": [{"label": pretty(r.feature), "value": float(r.contribution)} for r in drivers.itertuples()],
+           "drivers": [{"label": driver_label(r.feature, candidate), "value": float(r.contribution)}
+                       for r in drivers.itertuples()],
            "candidate": candidate}
-    text, source = generate_briefing(ctx)
-    st.markdown(text)
-    st.caption(f"Source: {source}")
+    # the briefing is tied to the exact inputs, so it is refreshed only when the user asks for it
+    key = (round(prob, 4), threshold, cluster_id, model_name, tuple(d["label"] for d in ctx["drivers"]))
+    st.markdown("Write an executive briefing for the candidate selected in the sidebar.")
+    if st.button("Generate AI briefing", type="primary"):
+        with st.spinner("Writing the briefing..."):
+            st.session_state["briefing"] = (key, *generate_briefing(ctx, use_ai=True))
+    saved = st.session_state.get("briefing")
+    if saved and saved[0] == key:
+        st.markdown(saved[1])
+        st.caption(f"Source: {saved[2]}")
+    else:
+        if saved:
+            st.info("The candidate or settings changed. Click the button to refresh the briefing.")
+        preview, _ = generate_briefing(ctx, use_ai=False)
+        st.markdown(preview)
+        st.caption("Source: template preview. Click the button for the AI version.")
 
 st.divider()
 st.caption("Predictions describe patterns in historical data and should support, not replace, human judgement. "

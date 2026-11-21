@@ -32,9 +32,16 @@ UNIVERSITY = ["no_enrollment", "Full time course", "Part time course", "Unknown"
 MAJORS = ["STEM", "Business Degree", "Humanities", "Arts", "Other", "No Major", "Unknown"]
 COMPANY_TYPES = ["Pvt Ltd", "Funded Startup", "Early Stage Startup", "Public Sector", "NGO", "Other", "Unknown"]
 
-# Fill these in when the cluster profiles (cluster_profiles.txt) are ready.
+# PROVISIONAL names taken from the cluster statistics in Dataset/clustered_data.csv.
+# Replace them with the names in Unsupervised_Learning/cluster_profiles.txt once that file exists.
 # Key = cluster id, value = short executive name. Missing ids fall back to "Segment <id>".
-CLUSTER_NAMES = {}
+CLUSTER_NAMES = {
+    0: "Established at large firms",
+    1: "Early-career, not yet employed",
+    2: "Senior, long-tenure",
+    3: "Stable mid-career core",
+    4: "Low-development-city candidates",
+}
 
 # Final XGBoost decision threshold agreed by the team (used when that model is available)
 XGB_THRESHOLD = 0.32
