@@ -51,12 +51,15 @@ Keep the whole card under 50 words. No headings, no bullet points, no extra note
 ```
 
 ### Example Input/Output
-**Input:** TODO - add one test case from `Generative_AI/test_results/test_results.csv` (for example `high_row651`: probability 63.5%, High risk, Segment 4).
+**Input:** test case `high_row651` from `Generative_AI/test_results/test_results.csv`: probability 63.5%, High risk, Segment 4 (segment rate 50%), top drivers: City development index: 0.62 (below average, average 0.83), Company information: missing.
 
-**Output:**
+**Output** (26 words):
 ```
-TODO - add the model's answer for this case
+High risk; HR should act now.
+City development index low (0.62) and missing company information are the strongest risk drivers.
+Initiate outreach to discuss retention opportunities.
 ```
+Note: in this case the model kept the three lines but left out the "Decision:", "Why:" and "Action:" labels (see Section 7).
 
 ### Assumptions & Limitations
 - Assumes the drivers are already sorted from strongest to weakest, so the model picks the right ones.
@@ -97,11 +100,21 @@ Retention plan: suggest two HR actions that fit this candidate's drivers and seg
 ```
 
 ### Example Input/Output
-**Input:** TODO - add the same test case as Template 1, so the two outputs can be compared.
+**Input:** the same test case as Template 1 (`high_row651`), so the two outputs can be compared: probability 63.5%, High risk, Segment 4 (segment rate 50%), top drivers: City development index: 0.62 (below average, average 0.83), Company information: missing.
 
-**Output:**
+**Output** (106 words):
 ```
-TODO - add the model's answer for this case
+Segment comparison:
+The candidate's 63.5% chance of looking for a new job is above the Segment 4 rate of 50%, indicating a higher priority for retention focus.
+
+Key drivers:
+- Low city development index (0.62) - a below-average environment that increases turnover risk.
+- Missing company information - lack of data signals uncertainty and raises risk.
+- Very limited experience (< 1 year) - early-career stage contributes to higher mobility.
+
+Retention plan:
+1. Offer a structured onboarding and mentorship program to address the candidate's limited experience and build engagement.
+2. Provide clear, personalized communication about company details and growth opportunities to mitigate uncertainty from missing information.
 ```
 
 ### Assumptions & Limitations
@@ -138,7 +151,14 @@ TODO - add the model's answer for this case
 
 ## 7. Lessons Learned During Prompt Testing
 
-TODO - add after the test results are ready (for example: did the model follow the format and word limits, did it invent any facts, which template was clearer).
+Both templates were tested on four test cases (`high_row651`, `elevated_row242`, `low_row1668`, `borderline_row817`). The full results are in `Generative_AI/test_results/test_results.csv` and in Sections 4 and 5 of `Phase2_Generative_AI.ipynb`.
+
+- **Format instructions are not always followed:** T1 asked for three lines starting with "Decision:", "Why:" and "Action:". The model kept the three lines in all four cases, but it left out the labels in two of them (`high_row651` and `elevated_row242`). A stricter instruction or a short example of the format could fix this.
+- **Word limits worked well:** T1 stayed between 26 and 31 words (limit 50), and T2 stayed between 91 and 106 words (limit 120).
+- **"Do not calculate any new numbers" worked:** in all T2 cases, the model compared the candidate with the segment using only "above" or "below", and the comparisons were correct, even in the close case (31.9% vs 30%).
+- **"Plain words" was not fully followed:** T2 still showed the raw effect values (for example "+1.05"), which are not meaningful for an HR executive. A clearer instruction like "do not show effect values" would help.
+- **Shorter is not always easier to read:** T1 is much shorter, but its readability grade (11.77) is almost the same as T2 (12.32), because the short sentences are packed with information.
+- **Segment context made the advice more useful:** in `elevated_row242`, T2 showed that the candidate (55.3%) is far above their segment rate (14%), which T1 could not show. This supports choosing T2 as the final template.
 
 ## 8. References to Prompt Engineering Best Practices
 
